@@ -15,6 +15,8 @@ public abstract class MCUDTO {
 
 	public abstract void phase4();
 
+	public abstract void phase4(String upcommingMovies);
+
 	public byte getPhasesSoFar() {
 		return phasesSoFar;
 	}
@@ -60,5 +62,5 @@ public abstract class MCUDTO {
 		MCUDTO other = (MCUDTO) obj;
 		return Objects.equals(MCU, other.MCU) && moviesInMCU == other.moviesInMCU && phasesSoFar == other.phasesSoFar;
 	}
-	
+
 }
