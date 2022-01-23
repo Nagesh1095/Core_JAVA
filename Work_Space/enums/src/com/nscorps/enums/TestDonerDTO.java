@@ -69,26 +69,26 @@ public class TestDonerDTO {
 		operation.save(dto3);
 		operation.printAll();
 		System.out.println();
-		System.out.println("get by bloodgroup");
+		System.out.println("Get by Bloodgroup");
 		DonerDTO res = operation.getByBloodGroup(BloodGroup.A_POSITIVE);
 		System.out.println(res.toString());
 		System.out.println();
-		System.out.println("get by gender");
+		System.out.println("Get by Gender");
 		DonerDTO get = operation.getByGender(Gender.MALE);
 		System.out.println(get.toString());
 		System.out.println();
-		System.out.println("updated contact number by name");
+		System.out.println("Updated contact number by Name");
 		DonerDTO update = operation.updateContactByName("Madhu", 9624365987l);
 		System.out.println(update.toString());
 		System.out.println();
 		operation.printAll();
 		System.out.println();
-		System.out.println("get all female array");
+		System.out.println("Get all female array");
 		DonerDTO[] all = operation.getByAllGender(Gender.FEMALE);
 		for (int index = 0; index < all.length; index++) {
 			System.out.println(all[index]);
 			System.out.println();
-			System.out.println("get by bloodgroup by array");
+			System.out.println("Get by bloodgroup by array");
 			DonerDTO[] response = operation.getByAllBloodGroup(BloodGroup.A_POSITIVE);
 			for (int i = 0; i < response.length; i++) {
 				System.out.println(response[i]);

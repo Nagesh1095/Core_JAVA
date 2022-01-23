@@ -8,6 +8,7 @@ public class WalletDAOImpl implements WalletDAO {
 	int index = 0;
 	int count;
 	int transactions = 0;
+	
 
 	@Override
 	public String createWallet(WalletDTO dto) {
@@ -19,7 +20,7 @@ public class WalletDAOImpl implements WalletDAO {
 	@Override
 	public float getCurrentBalance(String name) {
 		for (int index = 0; index < dtos.length; index++) {
-			if (dtos[index] != null && name.equals(dtos[index].getName())) {
+			if (name.equals(dtos[index].getName())) {
 				return dtos[index].getAvailableBalance();
 			}
 		}
@@ -30,7 +31,7 @@ public class WalletDAOImpl implements WalletDAO {
 	public float addMoney(double credit, String name) {
 		float totalBalance;
 		for (int index = 0; index < dtos.length; index++) {
-			if (dtos[index] != null && name.equals(dtos[index].getName())) {
+			if (name.equals(dtos[index].getName())) {
 				totalBalance = (float) (dtos[index].getAvailableBalance() + credit);
 				dtos[index].setAvailableBalance(totalBalance);
 				count++;
@@ -45,7 +46,7 @@ public class WalletDAOImpl implements WalletDAO {
 	public float pay(double debit, String name) {
 		float totalBalance;
 		for (int index = 0; index < dtos.length; index++) {
-			if (dtos[index] != null && name.equals(dtos[index].getName())) {
+			if (name.equals(dtos[index].getName())) {
 				totalBalance = (float) (dtos[index].getAvailableBalance() - debit);
 				dtos[index].setAvailableBalance(totalBalance);
 				count++;
@@ -70,14 +71,6 @@ public class WalletDAOImpl implements WalletDAO {
 
 	@Override
 	public byte getTotalTodaysTransaction() {
-//		byte allTrans;
-//		for (int index = 0; index < dtos.length; index++) {
-//			if (dtos[index] != null && name.equals(dtos[index].getName())) {
-//				allTrans = (byte) (dtos[index].getNoOfTransaction() - );
-//				dtos[index].setNoOfTransaction(allTrans);
-//				return (byte) allTrans=count;
-//			}
-//		}
 		return (byte) count;
 	}
 

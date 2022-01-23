@@ -48,7 +48,7 @@ public class Tester {
 		System.out.println("\n" + "The Current Balance is : " + dao1.getCurrentBalance("Phone-pe"));
 		System.out.println("\n" + "The Updated Balance is : " + dao1.addMoney(2554.6, "Phone-pe"));
 		System.out.println("\n" + "The Updated Balance is : " + dao1.addMoney(3468, "Phone-pe"));
-		System.out.println("\n" + "The Updated Balance is : " + dao1.addMoney(8599, "Phone-pe"));
+		System.out.println("\n" + "The Updated Balance is : " + dao1.addMoney(8585, "Phone-pe"));
 		System.out.println("\n" + "Total Remaining Transactions are : " + (byte) dao1.getRemainingTransaction());
 		System.out.println("\n" + "Total Transactions are : " + (byte) dao1.getTotalTodaysTransaction());
 		System.out.println("\n" + "Total Transactions in Amount : " + (double) dao1.totalTransactionInAmount());
@@ -59,6 +59,8 @@ public class Tester {
 		System.out.println("\n" + "Total Remaining Transactions are : " + (byte) dao2.getRemainingTransaction());
 		System.out.println("\n" + "Total Transactions are : " + (byte) dao2.getTotalTodaysTransaction());
 		System.out.println("\n" + "Total Transactions in Amount : " + (double) dao2.totalTransactionInAmount());
+
+		System.out.println("\n" + "Total Transactions in Amount : " + (double) dao1.totalTransactionInAmount());
 
 	}
 
